@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+body{
+	margin: 0px;
+	padding: 1px;
+	background-color: #333;
+}
+.titulo{
+	font-family: 'Bebas Neue', cursive;
+}
+.container{
+	width: 100%;
+	height: 50vh;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.card-container{
+	width: 250px;
+	height: 350px;
+}
+.card{
+	width: 100%;
+	height: 100%;
+	transition: transform 1s ease-in-out;
+	transform-style: preserve-3d;
+}
+.card-container:hover .card{
+	transform: rotateY(180deg);
+}
+.card figure{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	margin: 0;
+	border-radius: 45px;
+	display: flex;
+	justify-content: center;
+}
+.card .front{
+	background: #ffa500;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+
+}
+.card .back{
+	background: #ffa500;
+	transform: rotateY(180deg);
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+}
+
+/*RESPONSIVE*/
+@media screen and (max-width: 750px){
+	body{
+		margin: 10px;
+		padding:10px;
+	}
+	.container{
+	width: 500px;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	}
+.card-container{
+	width: 450px;
+	height: 300px;
+}
+.card{
+	width: 100%;
+	height: 100%;
+	transition: transform 1s ease-in-out;
+	transform-style: preserve-3d;
+	}
+.card figure{
+	width: 450px;
+	height: 240px;
+	position: absolute;
+	margin: 0;
+	border-radius: 45px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+}
